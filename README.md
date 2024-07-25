@@ -19,17 +19,17 @@ The EKF algorithm consists of three main steps: prediction, data association, an
 
 The state of the Turtlebot at time step \( t \) is given by:
 
-```
-x_t = [x_t, y_t, \theta_t]^T
-```
+$$
+x_t = \begin{pmatrix} x_t \\ y_t \\ \theta_t \end{pmatrix}
+$$
 
 ### 2. Process Model
 
 As the robot moves, its new state is computed by adding the odometry displacement to its previous state, transformed into the world frame.
 
-```
+$$
 x_t^W = x_{t-1}^W \oplus (u_t^r + w_t^r)
-```
+$$
 
 where \( u_t^r \) is the odometry displacement and \( w_t^r \) is the uncertainty (noise) in the odometry measurement.
 
@@ -37,11 +37,13 @@ where \( u_t^r \) is the odometry displacement and \( w_t^r \) is the uncertaint
 
 The prediction step involves computing the predicted new state and the new covariance.
 
-```
+$$
 \hat{x}_{k|k-1} = f(x_{k-1}, u_k, w_k)
+$$
 
+$$
 P_{k|k-1} = A_k P_{k-1} A_k^T + W_k Q_k W_k^T
-```
+$$
 
 where \( A_k \) and \( W_k \) are the Jacobians of the state equation with respect to the state and noise, respectively.
 
@@ -53,13 +55,17 @@ In this step, the algorithm matches the line measurements taken by the robot's s
 
 The update step involves calculating the Kalman gain \( K_k \), the new state \( x_k \), and the new covariance \( P_k \).
 
-```
+$$
 K_k = P_{k|k-1} H_k^T S_k^{-1}
+$$
 
+$$
 x_k = \hat{x}_{k|k-1} + K_k v_k
+$$
 
+$$
 P_k = (I - K_k H_k) P_{k|k-1}
-```
+$$
 
 ## Files
 
@@ -85,8 +91,8 @@ The major challenge encountered during the implementation was deriving the measu
 ---
 
 **Authors:**
-- [Moses Chuka Ebere](https://github.com/username1)
-- [Joseph Oloruntoba Adeola](https://github.com/username2)
+- [Moses Chuka Ebere](https://github.com/MosesEbere)
+- [Joseph Oloruntoba Adeola](https://github.com/adeola-jo)
 
 ---
 
