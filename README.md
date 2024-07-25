@@ -109,8 +109,8 @@ For more details, refer to the lab report `report.pdf`.
 
 For any inquiries, please contact:
 
-- Moses Chuka Ebere: moses.ebere@example.com
-- Joseph Oloruntoba Adeola: joseph.adeola@example.com
+- Moses Chuka Ebere: moseschukaebere@gmail.com
+- Joseph Oloruntoba Adeola: adeolajosepholorum@gmail.com
 
 ---
 
