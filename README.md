@@ -70,7 +70,7 @@ $$
 ## Files
 
 - `ekf_localization.py`: Contains the implementation of the EKF algorithm.
-- `EKF_Moses_Joseph-4.pdf`: The lab report detailing the implementation and discussion of the EKF algorithm.
+- `report.pdf`: The lab report detailing the implementation and discussion of the EKF algorithm.
 
 ## Disclaimer
 
